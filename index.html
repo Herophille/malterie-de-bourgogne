@@ -953,6 +953,55 @@
     }
 
     /* ============================================================
+       NOS CLIENTS
+    ============================================================ */
+    #clients { background: var(--c-bg-alt); }
+
+    .clients-intro {
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto 56px;
+    }
+    .clients-intro h2 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 600;
+        line-height: 1.1;
+        color: var(--c-text);
+    }
+    .clients-intro .divider { margin-left: auto; margin-right: auto; }
+
+    .clients-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .client-logo {
+        width: 180px;
+        height: 100px;
+        border: 2px dashed var(--c-border);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--c-white);
+        overflow: hidden;
+        transition: border-color var(--ease), box-shadow var(--ease);
+    }
+    .client-logo:hover { border-color: var(--c-accent); box-shadow: var(--shadow-sm); }
+    .client-logo img { max-width: 140px; max-height: 72px; object-fit: contain; }
+    .client-logo-placeholder {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--c-border);
+        text-align: center;
+    }
+
+    /* ============================================================
        SCROLL REVEAL
     ============================================================ */
     .reveal {
@@ -982,6 +1031,7 @@
     <a href="#processus" onclick="closeDrawer()">Le Processus</a>
     <a href="#facon" onclick="closeDrawer()">À Façon</a>
     <a href="#malts" onclick="closeDrawer()">Nos Malts</a>
+    <a href="#clients" onclick="closeDrawer()">Clients</a>
     <a href="#contact" onclick="closeDrawer()">Contact</a>
 </div>
 
@@ -1000,6 +1050,7 @@
                 <li><a href="#processus">Le Processus</a></li>
                 <li><a href="#facon">À Façon</a></li>
                 <li><a href="#malts">Nos Malts</a></li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="btn btn-primary nav-cta">Nous contacter</a>
@@ -1375,6 +1426,28 @@
 </section>
 
 <!-- ============================================================
+     NOS CLIENTS
+============================================================ -->
+<section id="clients" class="section" aria-label="Nos clients">
+    <div class="container">
+        <div class="clients-intro reveal">
+            <span class="label">Références</span>
+            <h2>Nos clients</h2>
+            <div class="divider"></div>
+            <p style="font-size:1rem;line-height:1.75;color:var(--c-text-muted);">Brasseries artisanales, brasseurs amateurs, distilleries — ils font confiance à nos malts bourguignons.</p>
+        </div>
+        <div class="clients-grid">
+            <div class="client-logo reveal reveal-d1"><span class="client-logo-placeholder">Logo</span></div>
+            <div class="client-logo reveal reveal-d2"><span class="client-logo-placeholder">Logo</span></div>
+            <div class="client-logo reveal reveal-d3"><span class="client-logo-placeholder">Logo</span></div>
+            <div class="client-logo reveal reveal-d1"><span class="client-logo-placeholder">Logo</span></div>
+            <div class="client-logo reveal reveal-d2"><span class="client-logo-placeholder">Logo</span></div>
+            <div class="client-logo reveal reveal-d3"><span class="client-logo-placeholder">Logo</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
      CONTACT
 ============================================================ -->
 <section id="contact" class="section" aria-label="Contact">
@@ -1465,6 +1538,7 @@
                 <li><a href="#processus">Processus</a></li>
                 <li><a href="#facon">À Façon</a></li>
                 <li><a href="#malts">Malts</a></li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="https://www.instagram.com/malterie_de_bourgogne/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-instagram">
